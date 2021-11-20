@@ -12,7 +12,7 @@ class HomeController extends Controller
     public function gmail(){
         return ("http:www.gmail.com") ;
     }
-    public function test1(){
+    public function test(){
         return view('welcome');
     }
     public function greeting($num1,$num2){

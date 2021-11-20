@@ -1,23 +1,10 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-
-});
-Route::get('/gmail', function () {
-
-});
-Route::get('/test', function () {
-    return view('test'); ;
-});
-Route::post('/test1', function () {
-
-});
-Route::get('/user/{id}/{age}', function ($id, $age) {
-
-});
-Route::get('/calculat/{num1}ก{num2}', function ($num1,$num2) {
-    return 'ผลรวมของ'.$num1."และ". $num2. 'คือ'.($num1+$num2) ;
-});
+Route::get('/',[HomeController::class,'index']);
+Route::get('/gmail',[HomeController::class,'gmail']);
+Route::get('/test',[HomeController::class,'test']);
+Route::get('/greeting/{num1}/{num2}',[HomeController::class,'greeting']);
