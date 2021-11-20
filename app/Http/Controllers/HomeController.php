@@ -9,13 +9,12 @@ class HomeController extends Controller
     public function index(){
         return view('welcome');
     }
-    public function gmail(){
-        return ("http:www.gmail.com") ;
+
+    public function create(){
+        return view('create');
     }
-    public function test(){
-        return view('welcome');
-    }
-    public function greeting($num1,$num2){
-        return 'ผลรวมของ'.$num1."และ". $num2. 'คือ'.($num1+$num2);
+
+    public function stroe(Request $request){
+
     }
 }
